@@ -1,0 +1,31 @@
+<div class="jumbotron">
+  <h4> Census </h4>
+</div>
+
+
+<form class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Enter Country Code" ng-model = "mc.countrycode">
+  </div>
+</form>
+<form class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Enter Year" ng-model = "mc.year">
+  </div>
+  <a class="btn btn-success" ng-click="mc.getCensus()" ng-href="">Submit</a>
+</form>
+
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Age</th>
+      <th>Population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="y in mc.get" class="success"></div>>
+      <td>{{y['2']}}</td>
+      <td>{{y['3']}}</td>
+    </tr>
+  </tbody>
+</table>
